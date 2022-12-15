@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Mulish:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Mulish:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
 
     <style>
@@ -45,25 +44,6 @@
         }
         #container {
             position: relative;
-        }
-
-        .blackbox {
-            display: none;
-            width: 100%;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.526);
-            position: absolute;
-            left: 0px;
-            top: 0px;
-        }
-        .citybox {
-            display: none;
-            width: 80%;
-            height: 400px;
-            background-color: white;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 50px;
         }
         #navbar{
             width: 100%;
@@ -283,9 +263,9 @@
             margin-left: -90px;
         }
         .carticon{
-            width: 2%;
+            width: 1%;
             font-weight: 400;
-            margin-right: -45px;
+            margin-right: -30px;
             
         }
         #home-list{
@@ -295,6 +275,7 @@
             justify-content: space-between;
             align-items: center;
             margin-top: 50px;
+            
         }
         .buttons>img{
             border-radius: 50%;
@@ -303,6 +284,7 @@
         #home-products{
             display: flex;
             overflow: scroll;
+            background-color: #f5f7fa;
         }
         .product-box{
             display: flex;
@@ -355,8 +337,192 @@
             border: 1px solid red;
             border-radius: 2px;
         }
-      
-     
+        #blackbox{
+            display: none;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.158);
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        #signup {
+            display: none;
+            width: 25%;
+            height: 500px;
+            background-color: #f5f7fa;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 120px;
+        }
+        #signup>div{
+            width: 80%;
+            margin: auto;
+            /* position: relative; */
+        }
+        #signup>div>img{
+            padding-top: 30px;
+            margin-bottom: 20px;
+            margin-left: 285px;
+        }
+        #signup>div+h5{
+            padding-top: 30px;
+            line-height: 25px;
+        }
+        .mobile-input{
+            border-bottom: 1px solid black;
+            outline: none;
+            margin-top: 20px;
+            background-color: white;
+            padding: 10px;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .mobile-input>input{
+            border: none;
+            outline: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+        #signup button{
+            font-family: 'Mulish', sans-serif;
+            background-color: red;
+            color: white;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+           
+        }
+        #otp{
+            display: none;
+            width: 25%;
+            height: 500px;
+            background-color: #f5f7fa;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 120px;
+        }
+        #otp>div{
+            width: 80%;
+            margin: auto;
+        }
+        #otp>div>img{
+            padding-top: 30px;
+            margin-bottom: 20px;
+            margin-left: 285px;
+        }
+        #otp>div+h5{
+            padding-top: 30px;
+            line-height: 25px;
+        }
+        .otp-input{
+            border-bottom: 1px solid black;
+            outline: none;
+            margin-top: 20px;
+            background-color: white;
+            padding: 10px;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .otp-input>input{
+            border: none;
+            outline: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+        #otp h6{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: #313131;
+        }
+        .resend{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 25px;
+        }
+        #otp button{
+            font-family: 'Mulish', sans-serif;
+            background-color: red;
+            color: white;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+            /* position: absolute;
+            top: 380; */
+        }
+
+        #email{
+            display: none;
+            width: 25%;
+            height: 500px;
+            background-color: #f5f7fa;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 120px;
+        }
+        #email>div{
+            width: 80%;
+            margin: auto;
+        }
+        #email>div>img{
+            padding-top: 30px;
+            margin-bottom: 20px;
+            margin-left: 285px;
+        }
+        #email>div+h5{
+            padding-top: 30px;
+            line-height: 25px;
+        }
+        .email-input{
+            border-bottom: 1px solid black;
+            outline: none;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 10px;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .email-input>input{
+            border: none;
+            outline: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+        #email h6{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: #313131;
+        }
+        #email p{
+            font-family: 'Mulish', sans-serif;
+            color: #717171;
+            font-size: 12px;
+        }
+        #email span{
+            font-family: 'Mulish', sans-serif;
+            color: #424040;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        #email button{
+            font-family: 'Mulish', sans-serif;
+            background-color: red;
+            color: white;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+            /* position: absolute;
+            top: 280; */
+        }
     </style>
 </head>
 
@@ -369,24 +535,26 @@
             <div id="cityname">
                 <span class="para">City Name <img class="logos" src="images/down-arrow.png" alt=""></span>
             </div>
-            <input type="text" placeholder="Search for Product">
-            <img class="serchicon" src="images/magnifying-glass.png" alt="">
+            <input id="searchIp" type="text" placeholder="Search for Product"  >
+            <img class="serchicon" src="images/magnifying-glass.png" alt="" onclick="search()">
             <img class="logos" src="" alt="">
             <img class="carticon" src="images/shopping-cart.png" alt="">
             <span class="para"> Cart </span>
-            <button>LOGIN / SIGNUP</button>
+            <button id="myname" onclick="login_out()">LOGIN / SIGNUP</button>
 
         </nav>
      </div>
-
+     
         <div class="slides">
             <img  id="slideShow" src="https://s.rmjo.in/Fitness-offer-banner-for-Web--2.jpg" alt="">
         </div>
+
         <div class="covid-info">
             <div>
                 <p>Safety precautions during COVID-19. We’re taking additional steps and precautionary measures to protect our community from COVID-19.</p>
             </div>
         </div>
+
         <div id="products-lists">
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 18 18" id="new-packages" y="806">
@@ -664,6 +832,7 @@
             </div>
             <h2 class="more">KNOW MORE</h2>
         </div>
+
         <div class="footer">
             <div class="details">
                 <h4>RentoMojo Pune: The Budget Way To A Better Lifestyle!</h4>
@@ -715,6 +884,7 @@
          </div>
          
         </div>
+
         <div class="media">
             <div>
             <h6>© 2022. Edunetwork Pvt. Ltd</h6>
@@ -728,8 +898,63 @@
             <h6>Go Up ^</h6>
             </div>
         </div>
-
+        
     </div>
+    <div id="blackbox">
+        <div id="signup">
+            <div>
+                <img id="cross" src="images/icons8-multiply-24.png" alt="">
+                <h5>Enter your number to</h5>
+                <h5>Signup or Login</h5>
+                <div class="mobile-input">
+                    <input  id="mob" type="text" placeholder="Enter Your Phone Number">
+                </div>
+                <button id="sign-btn" onclick="signinFun()">Continue</button>
+            </div>
+            
+        </div>
+
+        <div id="otp">
+            <div>
+               <img src="images/icons8-multiply-24.png" alt="">
+                <h5>Enter your OTP</h5>
+                <!-- <h5>Signup or Login</h5> -->
+                <div class="otp-input">
+                    <input type="text" placeholder="Enter Your OTP">
+                </div>
+                <h6>OTP sent to your Number</h6>
+                <div class="resend">
+                    <h6 style="color: red;">Resend Now</h6>
+                    <h6 style="color: red;">Change Number</h6>
+                </div>
+                <button id="otp-btn" onclick="isuserpresent()">Continue</button>
+            </div>
+        </div>
+
+        <div id="email">
+            <div>
+               <img src="images/icons8-multiply-24.png" alt="">
+                <h5>Just one last step</h5>
+                <!-- <h5>Signup or Login</h5> -->
+                <div class="email-input">
+                    <input id="fullname" type="text" placeholder="Enter name as per PAN / Govt ID">
+                </div>
+                <div class="email-input">
+                    <input id="mymail" type="text" placeholder="Email-ID">
+                </div> 
+                <div class="email-input">
+                    <input type="text" placeholder="Referral Code(Optional)">
+                </div>
+                <div>
+                    <p>By singing up, you agree to JivakMojo <span >Terms and Conditions & Privacy Policy</span> </p>
+                </div>
+                <button onclick="logincomplete()">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    
+   
 </body>
 <script>
     let arr = [
@@ -739,7 +964,6 @@
         "https://s.rmjo.in/WP-Web.png",
         "https://s.rmjo.in/HP_renacle-Web.png"
     ]
-
     var imageIndex = 0;
     function changeImage() {
         slideShow.setAttribute("src", arr[imageIndex]);
@@ -750,6 +974,16 @@
     }
     setInterval(changeImage, 3000);
 
+
+    // search
+    function search(){
+        let searchIp = document.getElementById('searchIp')
+        console.log('searchIp.valie', searchIp.value);
+        window.location.href = "http://127.0.0.1:5500/searchProduct.html";
+        localStorage.setItem('searchKey',  searchIp.value)
+    } 
+
+    //scoll .........
     let moveleft = 1;
     function backarrow(){
         let box = document.getElementById('product1')
@@ -762,6 +996,79 @@
         box.style.marginLeft = `-${moveleft * 400}px`;   
     }
 
+
+    //signin/signup ..........
+
+    let userData = JSON.parse(localStorage.getItem("data"));
+    if(userData == null){
+        userData = [];
+    }
+    // console.log(userData);
+    
+    let number = "";
+    let firstform = document.getElementById("signup")
+    let signin = document.getElementById("mob");
+    let sign_btn = document.getElementById("sign-btn");
+    let otpEnter = document.getElementById("otp")
+    let myname = document.getElementById("myname");
+    let myemail = document.getElementById("email");
+    let blackbox = document.getElementById("blackbox");
+    let myName = document.getElementById("fullname");
+    let myMail = document.getElementById("mymail");
+    let btnname = document.getElementById("log");
+    // let deleted = document.getElementById("cross")
+
+    function signinFun(element){
+       number = signin.value
+        otp.style.display = "block";
+        firstform.style.display = "none";
+    }
+
+    function isuserpresent(){
+        let isPresent = false;
+        console.log("num", number);
+        for(let i=0; i<userData.length; i++){
+            // console.log("arr[i].mobilenum == number", arr[i].mobilenum , number , arr[i].mobilenum == number);
+            console.log("userData[i].mobilenum == number",userData[i].mobilenum, number, userData[i].mobilenum == number);
+            if(userData[i].mobilenum == number){
+                isPresent = true;
+                break;
+            }  
+        }
+        console.log("isPresent =", isPresent);
+
+        if(isPresent == true){
+            console.log("if run");
+            myname.innerText = "Jivak";
+            myname.style.backgroundColor = "white";
+            myname.style.color="red";
+            myname.style.border = "1px solid red"
+            otp.style.display = "none";
+            blackbox.style.display = "none";
+        }
+         else{
+            otpEnter.style.display = "none";
+            myemail.style.display = "block";
+            }
+    }
+
+    function logincomplete(){
+        console.log(userData);
+        userData.push({mobilenum:number,name:myName.value,email:myMail.value});
+        console.log(userData);
+        localStorage.setItem("data",JSON.stringify(userData));
+        myname.innerText = "Jivak";
+        myname.style.backgroundColor = "white";
+        myname.style.color="red";
+        myname.style.border = "1px solid red"
+        myemail.style.display = "none";
+        blackbox.style.display = "none";
+    }
+
+    function login_out(){
+        blackbox.style.display = "block";
+        firstform.style.display = "block";
+    }
 
 </script>
 

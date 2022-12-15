@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search </title>
+    <style>
+         .logos{
+            width: 10px;
+            font-weight: 400;
+        }
+         #navbar{
+            width: 100%;
+            overflow: hidden;
+            background-color: white;
+            position: fixed;
+            top: 0;
+        }
+        nav {
+           width: 80%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;            
+        }
+        nav>div{
+            display: flex;
+        }
+        nav>img {
+            width: 11%;
+            padding-right: 10px;
+        }
+        .website_name{
+            font-family: 'Mulish', sans-serif;
+            font-weight: 900;
+        }
+        nav>div>span {
+            font-size: 15px;
+        }
+        .icon{
+            display: flex;
+            width: 15%;
+            justify-content: space-evenly;
+        }
+        .icon>img{
+            width: 18%;
+        }
+        .serchicon{
+            width: 2%;
+            font-weight: 400;
+            margin-left: -90px;
+        }
+        .carticon{
+            width: 2%;
+            font-weight: 400;
+            margin-right: -30px;
+            
+        }
+        nav>input {
+            width: 50%;
+            padding: 13px;
+            border-radius: 10px;
+            font-size: 12px;
+            border: 0.5px solid rgb(217, 234, 241);
+            font-weight: 600;
+            background-color: rgba(129, 123, 123, 0.082);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        nav>button {
+            padding: 13px;
+            background-color: rgb(204, 46, 46);
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+        .heading{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #313131;
+            
+        }
+        #filterProduct{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            margin-top: 100px;
+        }
+        .main{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .divbox{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .divbox h2{
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #313131;
+        }
+        #ip{
+            width: 50%;
+            padding: 13px;
+            border-radius: 10px;
+            font-size: 12px;
+            border: 0.5px solid rgb(217, 234, 241);
+            font-weight: 600;
+            background-color: rgba(129, 123, 123, 0.082);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .imagebox{
+            width: 100%;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div id="navbar">
+        <nav>
+            <img src="images/jivakmojo-logo.png" alt="logo">   
+            <div id="cityname">
+                <span class="para">City Name <img class="logos" src="images/down-arrow.png" alt=""></span>
+            </div>
+            <input id="ip" type="text" placeholder="Search for Product"  >
+            <img class="serchicon" src="images/magnifying-glass.png" alt=""onclick="filterDataclick()" >
+            <img class="logos" src="" alt="">
+            <img class="carticon" src="images/shopping-cart.png" alt="">
+            <span class="para"> Cart </span>
+            <button id="myname" onclick="login_out()">LOGIN / SIGNUP</button>
+
+        </nav>
+     </div>
+    
+    <!-- <input id="ip" type="text"  >
+    <button onclick="filterDataclick()" >search</button> -->
+    <div id="filterProduct" ></div>
+</body>
+
+<script>
+  let searchString =  localStorage.getItem( 'searchKey')
+  console.log('searchString =', searchString)
+
+  let productData = [
+    {
+        img: "https://p.rmjo.in/productSquare/ome5fyjy-500x500.jpg",
+        name : 'Napster Metal Queen Bed (6x5)',
+        price:"₹ 319 / mo"
+    },
+    {
+        img: "https://p.rmjo.in/productSquare/jey03mpj-500x500.jpg",
+        name : 'Smart Tv',
+        price:"₹ 319 / mo"
+    },
+    {
+        img: "https://p.rmjo.in/productSquare/e5hbsd2q-500x500.jpg",
+        name : 'Aurora Wooden Queen Bed (6x5)',
+        price:"₹ 539 / mo"
+    },
+    {
+        img: "https://p.rmjo.in/productSquare/ome5fyjy-500x500.jpg",
+        name : 'Napster Metal Queen Bed (6x5)',
+        price:"₹ 319 / mo"
+    },
+    {
+        img: "https://www.rentomojo.com/pune/furniture/rent-pixar-tv-unit/4468",
+        name : 'Pixar TV Unit',
+        price:"₹ 239 / mo"
+    },
+    {
+        img: "https://p.rmjo.in/productSquare/lj96iwkb-500x500.jpg",
+        name : 'Napster Metal Queen Bed (6x5)',
+        price:"₹ 319 / mo"
+    },
+  ]
+
+  function filterDataclick(){
+    let ip = document.getElementById('ip')
+    console.log('ip.value =', ip.value );
+    filterData(ip.value)
+  }
+
+  const filterData = (searchString)=>{
+    let filterProduct = document.getElementById('filterProduct')
+    filterProduct.innerHTML = null ;
+    const fildata = productData.filter( (item,i)=>{
+        return item.name.trim().toLowerCase().includes( searchString.trim().toLowerCase() )
+    } )
+    console.log('fildata =', fildata )
+    if(fildata.length == 0){
+        let text = document.createElement('h2')
+        text.innerText = 'data not found'
+        filterProduct.append( text )
+        return true
+    }
+    fildata.forEach(element => {
+        let main = document.createElement("div");
+        main.setAttribute("class","main")
+
+        let box = document.createElement("div");
+        box.setAttribute("class","divbox")
+        
+        let image = document.createElement("img");
+        image.setAttribute("src",element.img)
+        image.setAttribute("class","imagebox")
+
+        console.log("src",element.img);
+
+        let name = document.createElement('h2')
+        name.innerText = element.name;
+
+        let price = document.createElement("h4")
+        price.innerText = element.price;
+        
+        box.append(image, name, price )
+        main.append(box)
+        filterProduct.append( main )
+    });
+  }
+
+  filterData(searchString)
+
+   
+</script>
+
+</html>
