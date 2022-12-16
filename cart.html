@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart page</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Mulish:wght@700&family=Poppins:wght@100&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Mulish:wght@700&family=Poppins:wght@100;300&display=swap"
+        rel="stylesheet">
+    <style>
+        
+        #navbar {
+            width: 100%;
+            overflow: hidden;
+            background-color: white;
+            position: fixed;
+            top: 0;
+        }
+
+        nav {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav>div {
+            display: flex;
+            width: 50%;
+            align-items: center;
+        }
+
+        nav>div>img {
+            width: 18%;
+            padding-right: 10px;
+        }
+
+        .logos {
+            width: 10px;
+            font-weight: 400;
+        }
+
+        .cart-process {
+            display: flex;
+            width: 50%;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .process {
+            display: flex;
+            align-items: center;
+            /* margin: auto; */
+
+        }
+
+        .right {
+            /* font-family: 'Montserrat', sans-serif; */
+            width: 100%;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 50%;
+            margin-right: 20px;
+            margin-left: 20px;
+            background-color: #bababa;
+        }
+
+        .h4 {
+            font-family: 'Montserrat', sans-serif;
+            /* font-size: 18px; */
+            color: #bababa;
+        }
+
+        .line {
+            border: none;
+            width: 100%;
+            color: #bababa;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        .right1 {
+            /* font-family: 'Montserrat', sans-serif; */
+            font-family: 'Poppins', sans-serif;
+            width: 100%;
+            height: 20px;
+            border: 1px solid #1dbdc0;
+            background-color: #1dbdc0;
+            border-radius: 50%;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        .h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: #1dbdc0;
+        }
+
+        .line1 {
+            border: none;
+            width: 100%;
+            color: #1dbdc0;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        .head1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            margin: 0px;
+
+        }
+
+        .head2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+
+        }
+
+        .head3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            margin: 5px 0px 0px 0px;
+
+        }
+
+        .cart {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 80%;
+            margin: auto;
+            margin-top: 120px;
+        }
+
+        .div1 {
+            display: flex;
+            flex-direction: column;
+            width: 65%;
+        }
+
+        .chooseAdd {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .chooseAdd>div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .add1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .add2>button {
+            color: white;
+            background-color: red;
+        }
+
+        .summary {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid red;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .s1 {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 0px;
+        }
+
+        .payable {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .payable>div {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border: 1px solid #e2eaf0;
+            border-radius: 5px;
+        }
+
+        .p1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .m1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ph {
+            margin: -8px;
+            margin-left: 10px;
+            position: absolute;
+            background-color: white;
+            padding: 0px 5px;
+        }
+
+        #lastdiv {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #btn {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0px;
+            padding: 0px 20px;
+            position: absolute;
+            bottom: -30px;
+            width: 80%;
+            color: white;
+            background-color: red;
+        }
+        .div2{
+            width: 30%;
+
+        }
+        .coupon{
+            display: flex;
+            height: 25px;
+            align-items: center;
+            background-color: white;
+        }
+        .logo{
+            width: 3%;
+            margin-left: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <nav>
+            <div>
+                <img src="images/jivakmojo-logo.png" alt="logo">
+                <div id="cityname">
+                    <span class="para">City Name <img class="logos" src="images/down-arrow.png" alt=""></span>
+                </div>
+            </div>
+            <div class="cart-process">
+                <div class="process">
+                    <img class="right1" src="images/icons8-done-24.png" alt="">
+                    <h5 class="h1">Checkout</h5>
+                    <img class="line1" src="images/icons8-horizontal-line-24.png" alt="">
+                </div>
+                <div class="process">
+                    <img class="right" src="images/icons8-done-24.png" alt="">
+                    <h5 class="h4">Verification </h5>
+                    <img class="line" src="images/icons8-horizontal-line-24.png" alt="">
+
+                </div>
+                <div class="process">
+                    <img class="right" src="images/icons8-done-24.png" alt="">
+                    <h5 class="h4">Delivery</h5>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="cart">
+        <div class="div1">
+           
+            <div class="summary">
+                <h6 class="head1">Order Summary</h6>
+                <div class="s1">
+                    <div class="payable">
+                        <h6 class="head2 ph">Payable Now</h6>
+                        <div>
+                            <div class="p1">
+                                <p class="head3">Refundable Deposit</p>
+                                <p class="head2"><span>₹</span> 00</p>
+                            </div>
+                            <div class="p1">
+                                <p class="head3">Delivery Charges</p>
+                                <p class="head2"><span>₹</span> 00</p>
+                            </div>
+                        </div>
+
+                        <div id="btn">
+                            <div class="b1">
+                                <p class="head3"><span>₹</span>00</p>
+                                <p class="head2">payable Now</p>
+                            </div>
+                            <div>
+                                <h6 class="head2">Procced</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payable">
+                        <h6 class="head2 ph">Monthly Payable</h6>
+                        <div class="monthly">
+                            <div class="m1">
+                                <p class="head3">Products Rent</p>
+                                <p class="head2"><span>₹</span> 00</p>
+                            </div>
+                            <div class="m1">
+                                <p class="head3">GST</p>
+                                <p class="head2"><span>₹</span> 00</p>
+                            </div>
+                        </div>
+                        <div id="lastdiv">
+                            <p class="head3">Total Monthly Rent</p>
+                            <p class="head2"><span>₹</span> 00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="div2">
+            <div class="coupon">
+                <img src="https://www.rentomojo.com/public/images/radical-cart/icons/coupon__icon.svg" alt="">
+                <h6 class="head2"> Have a coupon code?</h6>
+                <img class="logo" src="images/icons8-forward-30.png" alt="">
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </div>
+</body>
+
+</html>
