@@ -1,71 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>search </title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Mulish:wght@200&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Mulish:wght@700&display=swap"
+            rel="stylesheet">
     <style>
-         .logos{
+        .logos {
             width: 10px;
             font-weight: 400;
         }
-         #navbar{
+       
+        .heading2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #313131d3;
+        }
+
+        .para {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        #navbar {
             width: 100%;
             overflow: hidden;
             background-color: white;
             position: fixed;
             top: 0;
         }
+
         nav {
-           width: 80%;
+            width: 80%;
             margin: auto;
             display: flex;
             align-items: center;
-            justify-content: space-between;            
+            justify-content: space-between;
         }
-        nav>div{
+
+        nav>div {
             display: flex;
         }
+
         nav>img {
             width: 11%;
             padding-right: 10px;
         }
-        .website_name{
+
+        .website_name {
             font-family: 'Mulish', sans-serif;
             font-weight: 900;
         }
+
         nav>div>span {
             font-size: 15px;
         }
-        .icon{
+
+        .icon {
             display: flex;
             width: 15%;
             justify-content: space-evenly;
         }
-        .icon>img{
+
+        .icon>img {
             width: 18%;
         }
-        .serchicon{
+
+        .serchicon {
             width: 2%;
             font-weight: 400;
             margin-left: -90px;
         }
-        .carticon{
+
+        .carticon {
             width: 2%;
             font-weight: 400;
             margin-right: -30px;
-            
+
         }
+
         nav>input {
             width: 50%;
             padding: 13px;
             border-radius: 10px;
             font-size: 12px;
             border: 0.5px solid rgb(217, 234, 241);
-            font-weight: 600;
+            font-weight: 400;
             background-color: rgba(129, 123, 123, 0.082);
             font-family: 'Montserrat', sans-serif;
+            outline: none;
         }
 
         nav>button {
@@ -75,38 +104,54 @@
             border: none;
             border-radius: 10px;
         }
-        .heading{
+
+        .heading {
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
             font-size: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             color: #313131;
-            
+
         }
-        #filterProduct{
+        .searchdiv{
             width: 80%;
-            margin: auto;
-            display: flex;
-            margin-top: 100px;
+            margin: 105px auto 20px auto;
         }
-        .main{
+        #filterProduct {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;   
+        }
+       
+        .main {
             display: flex;
             justify-content: space-evenly;
         }
-        .divbox{
-            width: 90%;
+
+        .divbox {
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            border: 1px solid #e6e6e6;
+
         }
-        .divbox h2{
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-            font-size: 20px;
+
+        .divbox h2 { 
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
             margin-bottom: 10px;
-            color: #313131;
+            color: #313131d3;
+            padding: 5px;
+            border-bottom: 1px solid #e6e6e6;
         }
-        #ip{
+        h4{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px; 
+        }
+        #ip {
             width: 50%;
             padding: 13px;
             border-radius: 10px;
@@ -116,119 +161,183 @@
             background-color: rgba(129, 123, 123, 0.082);
             font-family: 'Montserrat', sans-serif;
         }
-        .imagebox{
-            width: 100%;
-        }
 
+        .imagebox {
+            width: 100%;
+            height: 300px;
+        }
     </style>
-    
+
 </head>
+
 <body>
     <div id="navbar">
         <nav>
-            <img src="images/jivakmojo-logo.png" alt="logo">   
+            <img src="images/jivakmojo-logo.png" alt="logo">
             <div id="cityname">
                 <span class="para">City Name <img class="logos" src="images/down-arrow.png" alt=""></span>
             </div>
-            <input id="ip" type="text" placeholder="Search for Product"  >
-            <img class="serchicon" src="images/magnifying-glass.png" alt=""onclick="filterDataclick()" >
+            <input id="ip" type="text" placeholder="Search for Product">
+            <img class="serchicon" src="images/magnifying-glass.png" alt="" onclick="filterDataclick()">
             <img class="logos" src="" alt="">
             <img class="carticon" src="images/shopping-cart.png" alt="">
             <span class="para"> Cart </span>
             <button id="myname" onclick="login_out()">LOGIN / SIGNUP</button>
 
         </nav>
-     </div>
-    
-    <!-- <input id="ip" type="text"  >
-    <button onclick="filterDataclick()" >search</button> -->
-    <div id="filterProduct" ></div>
+    </div>
+
+   <div class="searchdiv">
+    <h3 class="heading">Search Result</h3>
+       <div id="filterProduct">  
+       </div>
+   </div>
 </body>
 
 <script>
-  let searchString =  localStorage.getItem( 'searchKey')
-  console.log('searchString =', searchString)
+    let searchString = localStorage.getItem('searchKey')
+    console.log('searchString =', searchString)
 
-  let productData = [
-    {
-        img: "https://p.rmjo.in/productSquare/ome5fyjy-500x500.jpg",
-        name : 'Napster Metal Queen Bed (6x5)',
-        price:"₹ 319 / mo"
-    },
-    {
-        img: "https://p.rmjo.in/productSquare/jey03mpj-500x500.jpg",
-        name : 'Smart Tv',
-        price:"₹ 319 / mo"
-    },
-    {
-        img: "https://p.rmjo.in/productSquare/e5hbsd2q-500x500.jpg",
-        name : 'Aurora Wooden Queen Bed (6x5)',
-        price:"₹ 539 / mo"
-    },
-    {
-        img: "https://p.rmjo.in/productSquare/ome5fyjy-500x500.jpg",
-        name : 'Napster Metal Queen Bed (6x5)',
-        price:"₹ 319 / mo"
-    },
-    {
-        img: "https://www.rentomojo.com/pune/furniture/rent-pixar-tv-unit/4468",
-        name : 'Pixar TV Unit',
-        price:"₹ 239 / mo"
-    },
-    {
-        img: "https://p.rmjo.in/productSquare/lj96iwkb-500x500.jpg",
-        name : 'Napster Metal Queen Bed (6x5)',
-        price:"₹ 319 / mo"
-    },
-  ]
+    let productData = [
+        {
+            img: "https://p.rmjo.in/productSquare/ome5fyjy-500x500.jpg",
+            name: 'Napster Metal Queen Bed (6x5)',
+            price: "₹ 319 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/productSquare/jey03mpj-500x500.jpg",
+            name: 'Smart Tv',
+            price: "₹ 250 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/productSquare/e5hbsd2q-500x500.jpg",
+            name: 'Aurora Wooden Queen Bed (6x5)',
+            price: "₹ 539 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/moodShot/cv4h094t-1024x512.jpg",
+            name: 'Elma Wooden Queen Bed (6.5x5)',
+            price: "₹ 339 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/moodShot/pv0pw1ds-1024x512.jpg",
+            name: 'Kipper Wooden Single Bed (6x3)',
+            price: "₹ 609 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/moodShot/eqh6zed5-1024x512.jpg",
+            name: 'Cheshire Fabric Sofa cum Bed (Green)',
+            price: "₹ 1049 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/moodShot/p75vtda8-1024x512.jpg",
+            name: 'Smart LED TV - 43"',
+            price: "₹ 1269 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/moodShot/0fq0psn2-1024x512.jpg",
+            name: 'Single Door Fridge (170 Litre)',
+            price: "₹ 659 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/moodShot/awhgksmv-1024x512.jpg",
+            name: 'Double Door Fridge (240 Litre)',
+            price: "₹ 1049 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/moodShot/zu0dn6wg-1024x512.jpg",
+            name: 'Mini Fridge',
+            price: "₹ 449 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/moodShot/c0zvcygb-1024x512.jpg",
+            name: 'Double Door Fridge & Washing Machine Combo',
+            price: "₹ 769 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/moodShot/i05w1kj4-1024x512.jpg",
+            name: 'Double Bed with Fridge & Washing Machine',
+            price: "₹ 769 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/moodShot/h0f5xeoj-1024x512.jpg",
+            name: 'BeneliG Falcon bike',
+            price: "₹ 4938 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/moodShot/7ega6igu-1024x512.jpg",
+            name: 'Okinawa R30 bike',
+            price: "₹ 3699 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/moodShot/g0wh5t5y-1024x512.jpg",
+            name: 'Okinawa Lite bike',
+            price: "₹ 4364 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/moodShot/vuzcahgz-1024x512.jpg",
+            name: 'Single Gear Alloy Bicycle',
+            price: "₹ 624 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/moodShot/527mkyt3-1024x512.jpg",
+            name: 'Single Gear Steel Bicycle',
+            price: "₹ 446 / mo"
+        },
+        {
+            img: "https://p.rmjo.in/productSquare/xf27smcs-500x500.jpg",
+            name: 'MTB 21 Speed Bicycle',
+            price: "₹ 847 / mo"
+        },
+    ]
 
-  function filterDataclick(){
-    let ip = document.getElementById('ip')
-    console.log('ip.value =', ip.value );
-    filterData(ip.value)
-  }
-
-  const filterData = (searchString)=>{
-    let filterProduct = document.getElementById('filterProduct')
-    filterProduct.innerHTML = null ;
-    const fildata = productData.filter( (item,i)=>{
-        return item.name.trim().toLowerCase().includes( searchString.trim().toLowerCase() )
-    } )
-    console.log('fildata =', fildata )
-    if(fildata.length == 0){
-        let text = document.createElement('h2')
-        text.innerText = 'data not found'
-        filterProduct.append( text )
-        return true
+    function filterDataclick() {
+        let ip = document.getElementById('ip')
+        console.log('ip.value =', ip.value);
+        filterData(ip.value)
     }
-    fildata.forEach(element => {
-        let main = document.createElement("div");
-        main.setAttribute("class","main")
 
-        let box = document.createElement("div");
-        box.setAttribute("class","divbox")
-        
-        let image = document.createElement("img");
-        image.setAttribute("src",element.img)
-        image.setAttribute("class","imagebox")
+    const filterData = (searchString) => {
+        let filterProduct = document.getElementById('filterProduct')
+        filterProduct.innerHTML = null;
+        const fildata = productData.filter((item, i) => {
+            return item.name.trim().toLowerCase().includes(searchString.trim().toLowerCase())
+        })
+        console.log('fildata =', fildata)
+        if (fildata.length == 0) {
+            let text = document.createElement('h2')
+            text.innerText = 'data not found'
+            filterProduct.append(text)
+            return true
+        }
+        fildata.forEach(element => {
+            let main = document.createElement("div");
+            main.setAttribute("class", "main")
 
-        console.log("src",element.img);
+            let box = document.createElement("div");
+            box.setAttribute("class", "divbox")
 
-        let name = document.createElement('h2')
-        name.innerText = element.name;
+            let image = document.createElement("img");
+            image.setAttribute("src", element.img)
+            image.setAttribute("class", "imagebox")
 
-        let price = document.createElement("h4")
-        price.innerText = element.price;
-        
-        box.append(image, name, price )
-        main.append(box)
-        filterProduct.append( main )
-    });
-  }
+            console.log("src", element.img);
 
-  filterData(searchString)
+            let name = document.createElement('h2')
+            name.innerText = element.name;
 
-   
+            let price = document.createElement("h4")
+            price.innerText = element.price;
+
+            box.append(image, name, price)
+            main.append(box)
+            filterProduct.append(main)
+        });
+    }
+
+    filterData(searchString)
+
+
 </script>
 
 </html>
