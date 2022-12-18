@@ -13,7 +13,6 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Mulish:wght@700&family=Poppins:wght@100;300&display=swap"
         rel="stylesheet">
     <style>
-        
         #navbar {
             width: 100%;
             overflow: hidden;
@@ -237,20 +236,127 @@
             color: white;
             background-color: red;
         }
-        .div2{
+
+        .div2 {
             width: 30%;
 
         }
-        .coupon{
+
+        .coupon {
             display: flex;
             height: 25px;
             align-items: center;
             background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid red;
         }
-        .logo{
+
+        .logo {
             width: 3%;
             margin-left: 25px;
         }
+
+        #cartItem {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid red;
+            margin-top: 5px;
+            border-radius: 10px;
+        }
+
+        .product_cart {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .c1 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .img1 {
+            width: 30%;
+            border-radius: 10px;
+        }
+
+        .img1>img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .img2 {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .i1>div>h6 {
+            width: 95%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-right: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            margin: 0px;
+        }
+
+        .i1 {
+            display: flex;
+            width: 20%;
+            margin-bottom: 20px;
+        }
+
+        .i1>img {
+            width: 100%;
+        }
+
+        .i2 {
+            display: flex;
+
+        }
+
+        .r1 {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+
+        .r1>p {
+            margin: 0px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 10px;
+            color: #bababa;
+            margin-bottom: 5px;
+        }
+
+        .c2 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn1 {
+            display: flex;
+            justify-content: space-evenly;
+            width: 45%;
+            border: 1px solid #e2eaf0;
+            border-radius: 5px;
+
+        }
+
+        .btn2 {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #e2eaf0;
+            border-radius: 5px;
+
+        }
+
     </style>
 </head>
 
@@ -260,7 +366,8 @@
             <div>
                 <img src="images/jivakmojo-logo.png" alt="logo">
                 <div id="cityname">
-                    <span class="para">City Name <img class="logos" src="images/down-arrow.png" alt=""></span>
+                    <a href="index.html" style="text-decoration: none; color:black"><span class="para">City Name <img
+                                class="logos" src="images/down-arrow.png" alt=""></span></a>
                 </div>
             </div>
             <div class="cart-process">
@@ -284,7 +391,7 @@
     </div>
     <div class="cart">
         <div class="div1">
-           
+
             <div class="summary">
                 <h6 class="head1">Order Summary</h6>
                 <div class="s1">
@@ -341,7 +448,42 @@
                 <img class="logo" src="images/icons8-forward-30.png" alt="">
             </div>
             <div id="cartItem">
-                
+                <div class="product_cart">
+                    <div class="c1">
+                        <div class="img1">
+                            <img src="https://p.rmjo.in/productSquare/ome5fyjy-500x500.jpg" alt="">
+                        </div>
+                        <div class="img2">
+                            <div class="i1">
+                                <div>
+                                    <h6>Napster Metal Queen Bed (6+3)</h6>
+                                </div>
+                                <img src="https://www.rentomojo.com/public/images/radical-cart/icons/delete__icon.svg"
+                                    alt="">
+                            </div>
+                            <div class="i2">
+                                <div class="r1">
+                                    <p>Rent</p>
+                                    <h6 class="head2" style="margin: 0px;">₹380/mo</h6>
+                                </div>
+                                <div class="r1">
+                                    <p>Depopsite</p>
+                                    <h6 class="head2" style="margin: 0px;">₹489</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c2">
+                        <div class="btn1">
+                            <p>-</p>
+                            <p>1</p>
+                            <p>+</p>
+                        </div>
+                        <div class="btn2">
+                            <p>12 Months </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div>
