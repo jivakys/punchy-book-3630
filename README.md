@@ -6,8 +6,8 @@ Contributors
 App Screenshot
 
 Clone of Rentomojo.com which is a furniture renting website
-This project is the group project developed by team of 3 in 5 days.
-We make the website fully functional and responsive.
+This project is the solo project developed in 3 to 5 days.
+I make the website fully functional and responsive.
 
 Features
 Build Landing page and Product page.
