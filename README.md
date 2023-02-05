@@ -1,7 +1,7 @@
 # Rentomojo.com-Clone
 
 ### Table of Contents
-1.About The Project
+1. About The Project
 2. Features
 3. Tech Stack
 4. App Screenshot
