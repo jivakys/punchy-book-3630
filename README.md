@@ -9,9 +9,9 @@
 ![Furniture on rent - Appliances   Electronics Rental in Pune - Google Chrome 05-02-2023 17_28_13](https://user-images.githubusercontent.com/112770989/216817496-8b3dcf7e-10e9-448e-b393-3e589b1e9d06.png)
 
 
-*Clone of Rentomojo.com which is a furniture renting website
-*This project is the solo project developed in 3 to 5 days.
-*I make the website fully functional and responsive.
+* Clone of Rentomojo.com which is a furniture renting website
+* This project is the solo project developed in 3 to 5 days.
+* I make the website fully functional and responsive.
 
 Features
 Build Landing page and Product page.
