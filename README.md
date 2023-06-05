@@ -12,8 +12,8 @@
 
 
 * Clone of Rentomojo.com which is a furniture renting website
-* This project is the solo project developed in 3 to 5 days.
-* I make the website fully functional and responsive.
+* This project is the solo project developed in 5 days.
+* I make the website functional.
 
 Features
 Build Landing page and Product page.
